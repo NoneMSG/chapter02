@@ -1,4 +1,4 @@
-package paint;
+package com.jx372.paint.point;
 
 public class ColorPoint extends Point {
 	private String color ;

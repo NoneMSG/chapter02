@@ -34,16 +34,32 @@ public class TV {
 		System.out.println("채널  :"+this.channel+" 볼륨: "+this.volume+" 전원: "+temp);
 	}
 	public void channel(int value){
+		if(value>255){
+			value =1;
+		}else if(value <1){
+			value =255;
+		}
 		this.channel = value;
 	}
 	public void channel(boolean flag){
+		
 		if(flag == true){
 			this.channel++;
 		}else{
 			this.channel--;
 		}
+		if(this.channel>255){
+			this.channel=1;
+		}else if(this.channel==0){
+			this.channel=255;
+		}
 	}
 	public void volume(int value){
+		if(value>100){
+			value =100;
+		}else if(value <1){
+			value =0;
+		}
 		this.volume=value;
 	}
 	public void volume(boolean flag){
@@ -51,6 +67,11 @@ public class TV {
 			this.volume++;
 		}else{
 			this.volume--;
+		}
+		if(this.volume>100){
+			this.volume =100;
+		}else if(this.volume <1){
+			this.volume =0;
 		}
 	}
 	public boolean power(){

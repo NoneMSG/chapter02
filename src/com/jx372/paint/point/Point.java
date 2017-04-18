@@ -1,4 +1,6 @@
-package paint;
+package com.jx372.paint.point;
+
+import com.jx372.paint.i.Drawable;
 
 public class Point implements Drawable {
 	private int x;

@@ -1,4 +1,7 @@
-package paint;
+package com.jx372.paint.shape;
+
+import com.jx372.paint.i.Drawable;
+import com.jx372.paint.i.Resizable;
 
 public abstract class Shape implements Drawable,Resizable {
 	private String fillColor;

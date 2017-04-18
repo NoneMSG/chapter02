@@ -1,4 +1,12 @@
-package paint;
+package com.jx372.paint.main;
+
+import com.jx372.paint.i.*;
+import com.jx372.paint.point.ColorPoint;
+import com.jx372.paint.point.Point;
+import com.jx372.paint.shape.Circle;
+import com.jx372.paint.shape.Rect;
+import com.jx372.paint.shape.Shape;
+import com.jx372.paint.shape.Triangle;
 
 public class PaintApp {
 
