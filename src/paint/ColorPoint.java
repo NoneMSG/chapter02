@@ -4,8 +4,7 @@ public class ColorPoint extends Point {
 	private String color ;
 	
 	public ColorPoint(int x, int y, String color){
-		this.setX(x);
-		this.setY(y);
+		super(x,y);
 		this.color =color;
 	}
 	public String getColor() {

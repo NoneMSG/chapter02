@@ -14,18 +14,50 @@ public class PaintApp {
 		
 		point2.setX(30);
 		point2.setY(50);
-		point1.show(false);
+		//point1.show(false);
+		draw(point2);
 		
 		Point point3 = new ColorPoint(50,80,"red");
-		point3.show();
-		
+		//point3.show();
+		draw(point3);
 		draw(new Rect());
 		draw(new Circle());
 		draw(new Triangle());
+		
 	}
-	public static void draw(Shape s){
-		s.draw();
+	public static void draw(Drawable drawable){
+		drawable.draw();
+		instanceofTest(drawable);
 	}
+	public static void resize(Drawable drawable, double rate){
+		if(drawable instanceof Resizable){
+			Resizable resizable = (Resizable)drawable;
+			resizable.resize(rate);
+		}
+	}
+	public static void instanceofTest(Drawable drawable){
+		
+		Shape s = new Circle();
+		System.out.println(s instanceof Object);
+		System.out.println(s instanceof Circle);
+		System.out.println(s instanceof Rect);
+		System.out.println(s instanceof Triangle);
+		Rect r= new Rect();
+		//클래스 경우에는 상속관계만 질의 가능
+		//System.out.println( r instanceof Circle);
+		System.out.println(r instanceof Shape);
+		System.out.println(s instanceof Object);
+		System.out.println(s instanceof Rect);
+		
+		ColorPoint pt = new ColorPoint(10,20,"yello");
+		System.out.println(pt instanceof Resizable);
+		System.out.println(pt instanceof Drawable);
+		System.out.println(pt instanceof Point);
+		System.out.println(pt instanceof ColorPoint);
+	}
+//	public static void draw(Shape s){
+//		s.draw();
+//	}
 
 }
 

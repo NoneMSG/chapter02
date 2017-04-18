@@ -1,6 +1,6 @@
 package paint;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable,Resizable {
 	private String fillColor;
 	private String lineColor;
 	
@@ -16,6 +16,9 @@ public abstract class Shape {
 	public void setLineColor(String lineColor) {
 		this.lineColor = lineColor;
 	}
-	
-	abstract public void draw();
+	@Override
+	public void resize(double rate){
+		
+	}
+	//abstract public void draw();
 }

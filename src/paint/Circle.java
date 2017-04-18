@@ -11,6 +11,7 @@ public class Circle extends Shape {
 	public void setR(double r) {
 		this.r = r;
 	}
+	
 	public int getX() {
 		return x;
 	}
@@ -27,5 +28,11 @@ public class Circle extends Shape {
 	@Override
 	public void draw() {
 		System.out.println("원 그렸습니다.");
+	}
+	
+	@Override
+	public void resize(double rate) {
+		this.r = r*rate;
+		
 	}
 }
