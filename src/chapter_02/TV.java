@@ -42,7 +42,6 @@ public class TV {
 		this.channel = value;
 	}
 	public void channel(boolean flag){
-		
 		if(flag == true){
 			this.channel++;
 		}else{
